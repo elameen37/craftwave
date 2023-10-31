@@ -11,7 +11,7 @@ export default function Header() {
             <span className="text-indigo-950">RealEstate</span>
           </h1>
         </Link>
-        <form className="bg-indigo-100 p-2 rounded-lg flex items-center">
+        <form className="bg-indigo-100 p-2 rounded-full flex items-center">
           <input
             type="text"
             placeholder="Search..."
@@ -21,17 +21,17 @@ export default function Header() {
         </form>
         <ul>
           <Link to="/">
-            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:underline">
+            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
               Home
             </li>
           </Link>
           <Link to="/about">
-            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:underline">
+            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
               About
             </li>
           </Link>
           <Link to="/sign-in">
-            <li className="sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:underline">
+            <li className="sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
               Sign In
             </li>
           </Link>
