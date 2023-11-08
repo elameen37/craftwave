@@ -195,7 +195,7 @@ export default function Profile() {
           placeholder='username'
           defaultValue={currentUser.username}
           id='username'
-          className='border p-3 rounded-lg'
+          className='border p-3 rounded-full'
           onChange={handleChange}
         />
         <input
@@ -203,7 +203,7 @@ export default function Profile() {
           placeholder='email'
           id='email'
           defaultValue={currentUser.email}
-          className='border p-3 rounded-lg'
+          className='border p-3 rounded-full'
           onChange={handleChange}
         />
         <input
@@ -211,16 +211,16 @@ export default function Profile() {
           placeholder='password'
           onChange={handleChange}
           id='password'
-          className='border p-3 rounded-lg'
+          className='border p-3 rounded-full'
         />
         <button
           disabled={loading}
-          className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'
+          className='bg-indigo-900 text-white rounded-full p-3 uppercase hover:opacity-95 disabled:opacity-80'
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
         <Link
-          className='bg-green-800 text-white p-3 rounded-lg uppercase text-center hover:opacity-95'
+          className='bg-green-800 text-white p-3 rounded-full uppercase text-center hover:opacity-95'
           to={'/create-listing'}
         >
           Create Listing

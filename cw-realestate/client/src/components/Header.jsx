@@ -1,23 +1,23 @@
-import { FaSearch } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { FaSearch } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set("searchTerm", searchTerm);
+    urlParams.set('searchTerm', searchTerm);
     const searchQuery = urlParams.toString();
     navigate(`/search?${searchQuery}`);
   };
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const searchTermFromUrl = urlParams.get("searchTerm");
+    const searchTermFromUrl = urlParams.get('searchTerm');
     if (searchTermFromUrl) {
       setSearchTerm(searchTermFromUrl);
     }
@@ -46,27 +46,27 @@ export default function Header() {
             <FaSearch className="text-indigo-950" />
           </button>
         </form>
-        <ul>
-          <Link to="/">
+        <ul className='flex gap-4'>
+          <Link to='/'>
             <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
               Home
             </li>
           </Link>
-          <Link to="/about">
+          <Link to='/about'>
             <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
               About
             </li>
           </Link>
-          <Link to="/profile">
+          <Link to='/profile'>
             {currentUser ? (
               <img
-                className="rounded-full h-10 w-10 object-cover"
+                className='rounded-full h-9 w-9 object-cover'
                 src={currentUser.avatar}
-                alt="profile"
+                alt='profile'
               />
             ) : (
               <li className="sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
-                Sign In
+              Sign in
               </li>
             )}
           </Link>
