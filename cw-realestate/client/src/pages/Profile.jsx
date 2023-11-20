@@ -262,7 +262,7 @@ export default function Profile() {
               <Link to={`/listing/${listing._id}`}>
                 <img
                   src={listing.imageUrls[0]}
-                  alt='listing cover'
+                  alt='listings cover'
                   className='h-16 w-16 object-contain'
                 />
               </Link>
