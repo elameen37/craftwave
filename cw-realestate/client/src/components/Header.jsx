@@ -23,7 +23,7 @@ export default function Header() {
     }
   }, [location.search]);
   return (
-    <header className="bg-indigo-200 shadow-sm">
+    <header className="bg-indigo-200 shadow-md sticky top-0 z-50 transition-opacity duration-300 ease-in-out">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-4">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
@@ -60,7 +60,7 @@ export default function Header() {
           <Link to='/profile'>
             {currentUser ? (
               <img
-                className='rounded-full h-9 w-9 object-cover'
+                className='rounded-full h-8 w-8 object-cover'
                 src={currentUser.avatar}
                 alt='profile'
               />
