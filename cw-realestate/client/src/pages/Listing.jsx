@@ -14,7 +14,7 @@ import {
   FaParking,
   FaShare,
 } from 'react-icons/fa';
-// import Contact from '../components/Contact';
+import Contact from '../components/Contact';
 
 // https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.
 
@@ -101,11 +101,11 @@ export default function Listing() {
               {listing.address}
             </p>
             <div className='flex gap-4'>
-              <p className='bg-red-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
+              <p className='bg-red-900 w-full max-w-[200px] text-white text-center p-1 rounded-full'>
                 {listing.type === 'rent' ? 'For Rent' : 'For Sale'}
               </p>
               {listing.offer && (
-                <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>
+                <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-full'>
                   ${+listing.regularPrice - +listing.discountPrice} OFF
                 </p>
               )}
@@ -139,9 +139,9 @@ export default function Listing() {
             {currentUser && listing.userRef !== currentUser._id && !contact && (
               <button
                 onClick={() => setContact(true)}
-                className='bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 p-3'
+                className='bg-indigo-950 text-white rounded-full uppercase hover:opacity-95 p-2'
               >
-                Contact landlord
+                Contact Landlord
               </button>
             )}
             {contact && <Contact listing={listing} />}
