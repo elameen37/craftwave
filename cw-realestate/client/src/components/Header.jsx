@@ -49,12 +49,12 @@ export default function Header() {
         </form>
         <ul className='flex gap-4'>
           <Link to='/'>
-            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
+            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg font-medium text-indigo-950 hover:opacity-75">
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
+            <li className="hidden sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg font-medium text-indigo-950 hover:opacity-75">
               About
             </li>
           </Link>
@@ -66,7 +66,7 @@ export default function Header() {
                 alt='profile'
               />
             ) : (
-              <li className="sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg text-indigo-950 hover:opacity-75">
+              <li className="sm:inline-block mx-2 sm:mx-4 text-sm sm:text-lg font-medium text-indigo-950 hover:opacity-75">
               Sign in
               </li>
             )}
