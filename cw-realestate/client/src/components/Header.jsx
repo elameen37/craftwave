@@ -28,6 +28,7 @@ export default function Header() {
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
             <span className="text-indigo-500">CW</span>
+            <span className="text-indigo-700">-</span>
             <span className="text-indigo-950">RealEstate</span>
           </h1>
         </Link>
