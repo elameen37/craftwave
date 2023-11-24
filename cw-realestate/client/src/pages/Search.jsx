@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ListingItem from '../components/ListingItem';
+// import ListingItem from '../components/ListingItem';
 
 export default function Search() {
   const navigate = useNavigate();
@@ -148,7 +148,7 @@ export default function Search() {
             <label className='font-semibold'>Type:</label>
             <div className='flex gap-2'>
               <input
-                type='checkbox'
+                type='radio'
                 id='all'
                 className='w-5'
                 onChange={handleChange}
@@ -158,7 +158,7 @@ export default function Search() {
             </div>
             <div className='flex gap-2'>
               <input
-                type='checkbox'
+                type='radio'
                 id='rent'
                 className='w-5'
                 onChange={handleChange}
@@ -168,7 +168,7 @@ export default function Search() {
             </div>
             <div className='flex gap-2'>
               <input
-                type='checkbox'
+                type='radio'
                 id='sale'
                 className='w-5'
                 onChange={handleChange}
@@ -243,11 +243,11 @@ export default function Search() {
             </p>
           )}
 
-          {!loading &&
+          {/* {!loading &&
             listings &&
             listings.map((listing) => (
               <ListingItem key={listing._id} listing={listing} />
-            ))}
+            ))} */}
 
           {showMore && (
             <button
